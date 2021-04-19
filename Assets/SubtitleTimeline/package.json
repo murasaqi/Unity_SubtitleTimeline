@@ -1,0 +1,19 @@
+{
+    "name": "com.murasaqi.tools",
+    "version": "1.0",
+    "displayName": "UnitySubtitleTimeline",
+    "description": "This is an subtitle timeline",
+    "unity": "2020.3",
+    "unityRelease": "0b5",
+    "keywords": [
+      "keyword1",
+      "keyword2",
+      "keyword3"
+    ],
+    "author": {
+      "name": "murasaqi",
+      "email": "hogehoge@example.com",
+      "url": "https://www.hogehoge."
+    }
+  }
+  
