@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/.idea.Unity_SubtitleTimeline.iml
+/projectSettingsUpdater.xml
+# Datasource local storage ignored files
+/../../../../../../:\works\Unity_SubtitleTimeline\.idea\.idea.Unity_SubtitleTimeline\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
