@@ -28,11 +28,20 @@ public class SubtitleTimelineMixerBehaviour : PlayableBehaviour
             var clip = clips[i];
             var clipProgress = Mathf.Min((float) (director.time - clip.start), (float) clip.duration) / (float) clip.duration;
             if (clip.start <= director.time && director.time < clip.start + clip.duration)
-            { 
+            {
+                trackBinding.enable = true;
                 trackBinding.UpdateSubtitle(clip.displayName);
+                trackBinding.textColor = input.textColor;
+                trackBinding.backgroundColor = input.backgroundColor;
+                trackBinding.fontSizeMax = input.fontSizeMax;
+                trackBinding.fontSizeMin = input.fontSizeMin;
+                if (input.fontAsset != null) trackBinding.fontAsset = input.fontAsset;
+                return;
             }
+
+            trackBinding.enable = false;
             // Use the above variables to process each frame of this playable.
-            
+
         }
     }
 }
