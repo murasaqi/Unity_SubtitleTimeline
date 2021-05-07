@@ -3,12 +3,13 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 using SubtitleTimeline;
+using TMPro;
+using UnityEngine.UI;
 
 [Serializable]
 public class SubtitleTimelineClip : PlayableAsset, ITimelineClipAsset
 {
     public SubtitleTimelineBehaviour template = new SubtitleTimelineBehaviour ();
-
     public ClipCaps clipCaps
     {
         get { return ClipCaps.None; }

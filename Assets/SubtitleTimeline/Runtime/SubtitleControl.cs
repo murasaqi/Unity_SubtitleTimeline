@@ -25,6 +25,22 @@ namespace SubtitleTimeline
             }
         }
 
+        public TextMeshProUGUI textMeshProUGUI
+        {
+            set
+            {
+                subtitleTMP = value;
+            }
+        }
+        
+        public Image backgroundImage 
+        {
+            set
+            {
+                backgroundUI = value;
+            }
+        }
+
         public TMP_FontAsset fontAsset
         {
             set

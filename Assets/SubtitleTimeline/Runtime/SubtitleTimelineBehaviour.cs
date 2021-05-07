@@ -4,6 +4,7 @@ using UnityEngine.Playables;
 using UnityEngine.Timeline;
 using SubtitleTimeline;
 using TMPro;
+using UnityEngine.UI;
 
 [Serializable]
 public class SubtitleTimelineBehaviour : PlayableBehaviour

@@ -4,12 +4,17 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 using SubtitleTimeline;
+using TMPro;
+using UnityEngine.UI;
 
 public class SubtitleTimelineMixerBehaviour : PlayableBehaviour
 {
     
     public List<TimelineClip> clips { get; set; }
     public PlayableDirector director { get; set; }
+
+    public TextMeshProUGUI textMeshProUGUI;
+    public Image backgroundImage;
     // NOTE: This function is called at runtime and edit time.  Keep that in mind when setting the values of properties.
     public override void ProcessFrame(Playable playable, FrameData info, object playerData)
     {
@@ -29,6 +34,9 @@ public class SubtitleTimelineMixerBehaviour : PlayableBehaviour
             var clipProgress = Mathf.Min((float) (director.time - clip.start), (float) clip.duration) / (float) clip.duration;
             if (clip.start <= director.time && director.time < clip.start + clip.duration)
             {
+
+                trackBinding.backgroundImage = backgroundImage;
+                trackBinding.textMeshProUGUI = textMeshProUGUI;
                 trackBinding.enable = true;
                 trackBinding.UpdateSubtitle(clip.displayName);
                 trackBinding.textColor = input.textColor;
