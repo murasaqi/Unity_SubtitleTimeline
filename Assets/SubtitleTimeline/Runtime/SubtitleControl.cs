@@ -9,8 +9,8 @@ namespace SubtitleTimeline
 
     public class SubtitleControl : MonoBehaviour
     {
-        [SerializeField] private Image backgroundUI;
-        [SerializeField] private TextMeshProUGUI subtitleTMP;
+        private Image backgroundUI;
+        private TextMeshProUGUI subtitleTMP;
         [SerializeField] private int maxLineWidth = 1800;
         [SerializeField] private int maxLineHeight = 100;
         public int fontSizeMin = 10;
@@ -20,8 +20,8 @@ namespace SubtitleTimeline
         {
             set
             {
-                backgroundUI.gameObject.SetActive(value);
-                subtitleTMP.gameObject.SetActive(value);
+                if(backgroundUI != null)backgroundUI.gameObject.SetActive(value);
+                if(subtitleTMP != null)subtitleTMP.gameObject.SetActive(value);
             }
         }
 
@@ -37,7 +37,7 @@ namespace SubtitleTimeline
         {
             set
             {
-                backgroundUI = value;
+                if(backgroundUI)backgroundUI = value;
             }
         }
 
@@ -45,14 +45,14 @@ namespace SubtitleTimeline
         {
             set
             {
-                subtitleTMP.font = value;
+                if(subtitleTMP)subtitleTMP.font = value;
             }
         }
         public Color textColor
         {
             set
             {
-                subtitleTMP.color = value;
+                if(subtitleTMP)subtitleTMP.color = value;
             }
         }
 
@@ -60,7 +60,7 @@ namespace SubtitleTimeline
         {
             set
             {
-                backgroundUI.color = value;
+                if(backgroundUI)backgroundUI.color = value;
             }
         }
         // Start is called before the first frame update
