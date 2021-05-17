@@ -20,8 +20,8 @@ namespace SubtitleTimeline
         {
             set
             {
-                if(backgroundUI != null)backgroundUI.gameObject.SetActive(value);
-                if(subtitleTMP != null)subtitleTMP.gameObject.SetActive(value);
+                if (backgroundUI != null) backgroundUI.enabled = value;
+                if(subtitleTMP != null)subtitleTMP.enabled = value;
             }
         }
 
@@ -73,17 +73,22 @@ namespace SubtitleTimeline
 
         public void UpdateSubtitle(string text)
         {
-            subtitleTMP.text = text;
-            subtitleTMP.enableAutoSizing = true;
-            subtitleTMP.fontSizeMin = fontSizeMin;
-            subtitleTMP.fontSizeMax = fontSizeMax;
-            subtitleTMP.ForceMeshUpdate(true,true);
-            // subtitleTMP.ForceMeshUpdate();
-            subtitleTMP.rectTransform.sizeDelta =new Vector2(Mathf.Min(subtitleTMP.preferredWidth,maxLineWidth), Mathf.Min(subtitleTMP.preferredHeight,maxLineHeight));
-            backgroundUI.rectTransform.sizeDelta = new Vector2(subtitleTMP.rectTransform.sizeDelta.x, subtitleTMP.rectTransform.sizeDelta.y);
 
-            backgroundUI.rectTransform.position = subtitleTMP.rectTransform.position;
+            if (backgroundUI && subtitleTMP)
+            {
+                subtitleTMP.text = text;
+                subtitleTMP.enableAutoSizing = true;
+                subtitleTMP.fontSizeMin = fontSizeMin;
+                subtitleTMP.fontSizeMax = fontSizeMax;
+                subtitleTMP.ForceMeshUpdate(true,true);
+                // subtitleTMP.ForceMeshUpdate();
+                subtitleTMP.rectTransform.sizeDelta =new Vector2(Mathf.Min(subtitleTMP.preferredWidth,maxLineWidth), Mathf.Min(subtitleTMP.preferredHeight,maxLineHeight));
+                backgroundUI.rectTransform.sizeDelta = new Vector2(subtitleTMP.rectTransform.sizeDelta.x, subtitleTMP.rectTransform.sizeDelta.y);
 
+                backgroundUI.rectTransform.position = subtitleTMP.rectTransform.position;
+    
+            }
+            
         }
 
         // Update is called once per frame
