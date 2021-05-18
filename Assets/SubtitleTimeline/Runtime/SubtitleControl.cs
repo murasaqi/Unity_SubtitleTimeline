@@ -9,8 +9,8 @@ namespace SubtitleTimeline
 
     public class SubtitleControl : MonoBehaviour
     {
-        private Image backgroundUI;
-        private TextMeshProUGUI subtitleTMP;
+        [SerializeField] private Image backgroundUI;
+        [SerializeField] private TextMeshProUGUI subtitleTMP;
         [SerializeField] private int maxLineWidth = 1800;
         [SerializeField] private int maxLineHeight = 100;
         public int fontSizeMin = 10;
