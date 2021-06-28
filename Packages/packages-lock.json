@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.murasaqi.tools.subtitletimeline": {
+      "version": "https://github.com/murasaqi/Unity_SubtitleTimeline.git?path=/Assets/SubtitleTimeline",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "24a5d30233669d3f612af91be7ef1eee99330171"
+    },
     "com.unity.collab-proxy": {
       "version": "1.3.9",
       "depth": 0,
