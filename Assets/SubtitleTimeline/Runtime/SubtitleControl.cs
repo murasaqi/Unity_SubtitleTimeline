@@ -9,86 +9,54 @@ namespace SubtitleTimeline
 
     public class SubtitleControl : MonoBehaviour
     {
-        [SerializeField] private Image backgroundUI;
+        [SerializeField] private RectTransform background;
         [SerializeField] private TextMeshProUGUI subtitleTMP;
         [SerializeField] private int maxLineWidth = 1800;
-        [SerializeField] private int maxLineHeight = 100;
-        public int fontSizeMin = 10;
-        public int fontSizeMax = 30;
-
-        public bool enable
-        {
-            set
-            {
-                if (backgroundUI != null) backgroundUI.enabled = value;
-                if(subtitleTMP != null)subtitleTMP.enabled = value;
-            }
-        }
-
-        public TextMeshProUGUI textMeshProUGUI
-        {
-            set
-            {
-                subtitleTMP = value;
-            }
-        }
-        
-        public Image backgroundImage 
-        {
-            set
-            {
-                if(backgroundUI)backgroundUI = value;
-            }
-        }
-
-        public TMP_FontAsset fontAsset
-        {
-            set
-            {
-                if(subtitleTMP)subtitleTMP.font = value;
-            }
-        }
-        public Color textColor
-        {
-            set
-            {
-                if(subtitleTMP)subtitleTMP.color = value;
-            }
-        }
-
-        public Color backgroundColor
-        {
-            set
-            {
-                if(backgroundUI)backgroundUI.color = value;
-            }
-        }
+        // public int fontSizeMin = 10;
+        // public int fontSizeMax = 30;
+        private Image _image;
+        public string text => subtitleTMP.text;
         // Start is called before the first frame update
         void Start()
         {
 
         }
-        
-        // public TextMeshPro
 
-        public void UpdateSubtitle(string text)
+        public void UpdateSubtitle(string text, Color textColor, Color backgroundColor)
         {
-
-            if (backgroundUI && subtitleTMP)
+            if (_image == null)
             {
-                subtitleTMP.text = text;
-                subtitleTMP.enableAutoSizing = true;
-                subtitleTMP.fontSizeMin = fontSizeMin;
-                subtitleTMP.fontSizeMax = fontSizeMax;
-                subtitleTMP.ForceMeshUpdate(true,true);
-                // subtitleTMP.ForceMeshUpdate();
-                subtitleTMP.rectTransform.sizeDelta =new Vector2(Mathf.Min(subtitleTMP.preferredWidth,maxLineWidth), Mathf.Min(subtitleTMP.preferredHeight,maxLineHeight));
-                backgroundUI.rectTransform.sizeDelta = new Vector2(subtitleTMP.rectTransform.sizeDelta.x, subtitleTMP.rectTransform.sizeDelta.y);
-
-                backgroundUI.rectTransform.position = subtitleTMP.rectTransform.position;
-    
+                var image = background.GetComponent<Image>();
+                if (!image)
+                {
+                    _image= background.gameObject.AddComponent<Image>();
+                }
+                else
+                {
+                    _image = image;
+                }
             }
+            subtitleTMP.text = text;
+            subtitleTMP.color = textColor;
+            _image.color = backgroundColor;
+            // subtitleTMP.fontSizeMin = fontSizeMin;
+            // subtitleTMP.fontSizeMax = fontSizeMax;
+            // subtitleTMP.ForceMeshUpdate();
+            subtitleTMP.rectTransform.sizeDelta =new Vector2(Mathf.Min(subtitleTMP.preferredWidth,maxLineWidth), subtitleTMP.preferredHeight);
+            background.sizeDelta = new Vector2(Mathf.Min(subtitleTMP.preferredWidth,maxLineWidth), subtitleTMP.preferredHeight);
             
+        }
+
+        public void DisableSubtitle()
+        {
+            background.gameObject.SetActive(false);
+            subtitleTMP.gameObject.SetActive(false);
+        }
+
+        public void EnableSubtitle()
+        {
+            background.gameObject.SetActive(true);
+            subtitleTMP.gameObject.SetActive(true);
         }
 
         // Update is called once per frame
