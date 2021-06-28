@@ -7,6 +7,7 @@
 
 ## Install
 パッケージとしてインストールしたい場合はAssets/packages/manifest.jsonを開いて一行追加。
+TextMeshProを利用しているので合わせてインストールしてください。
 ```
 {
 "dependencies": {
