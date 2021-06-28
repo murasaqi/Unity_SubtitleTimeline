@@ -7,8 +7,8 @@ using SubtitleTimeline;
 [Serializable]
 public class SubtitleTimelineBehaviour : PlayableBehaviour
 {
-    public Color textColor;
-    public Color backgroundColor;
+    public Color textColor = Color.white;
+    public Color backgroundColor = new Color(0,0,0,0.8f);
 
     public override void OnPlayableCreate (Playable playable)
     {

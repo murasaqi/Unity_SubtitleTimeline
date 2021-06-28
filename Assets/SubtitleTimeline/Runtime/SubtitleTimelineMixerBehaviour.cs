@@ -19,7 +19,8 @@ public class SubtitleTimelineMixerBehaviour : PlayableBehaviour
             return;
 
         int inputCount = playable.GetInputCount ();
-
+        
+        trackBinding.DisableSubtitle();
         for (int i = 0; i < inputCount; i++)
         {
             float inputWeight = playable.GetInputWeight(i);
@@ -29,7 +30,8 @@ public class SubtitleTimelineMixerBehaviour : PlayableBehaviour
             var clipProgress = Mathf.Min((float) (director.time - clip.start), (float) clip.duration) / (float) clip.duration;
             if (clip.start <= director.time && director.time < clip.start + clip.duration)
             { 
-                trackBinding.UpdateSubtitle(clip.displayName);
+                trackBinding.EnableSubtitle();
+                trackBinding.UpdateSubtitle(clip.displayName,input.textColor,input.backgroundColor);
             }
             // Use the above variables to process each frame of this playable.
             

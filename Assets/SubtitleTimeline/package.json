@@ -5,7 +5,7 @@
   "displayName": "SubtitleTimeline",
   "keywords": [ "unity" ],
   "license": "SEE LICENSE IN LICENSE",
-  "name": "jp.murasaqi.tools.subtitle",
+  "name": "com.murasaqi.tools.subtitletimeline",
   "repository": "https://github.com/murasaqi/Unity_SubtitleTimeline",
   "unity": "2020.3",
   "unityRelease": "0f2",
