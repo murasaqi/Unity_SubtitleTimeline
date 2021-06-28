@@ -266,6 +266,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4527368504392492, guid: a87f0180d46fd334b9025d0314a0dc70, type: 3}
   m_PrefabInstance: {fileID: 296138508}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &296653115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7970143244140792099, guid: a343d257bab9fcd4b8d737f0f6f3b593, type: 3}
+  m_PrefabInstance: {fileID: 7970143244381280280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &653260035
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,9 +392,14 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -513258341193973207, guid: 4e2e772308146644eb79eb345fbd4f25, type: 2}
-    value: {fileID: 1458376777}
+    value: {fileID: 0}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 0695903125acc374f8bbaf80c0c776cf: {fileID: 296653115}
+    - ea45878d9ebfbf84fb8514643784631e: {fileID: 2130089816}
+    - 9200fd6e73999fe48937708b70a26920: {fileID: 2130089816}
+    - 9d17561a7a45fea4089e522ff1713469: {fileID: 296653115}
+    - 0ca589ea5ad9e0043a24635cc661f030: {fileID: 296653115}
 --- !u!4 &872997345
 Transform:
   m_ObjectHideFlags: 0
@@ -685,17 +701,6 @@ LightProbeGroup:
   - {x: -0.8738291, y: 0.51661086, z: 2.5225298}
   - {x: -1.3810283, y: 0.51661086, z: 2.9244456}
   m_Dering: 0
---- !u!114 &1458376777 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7970143245227149393, guid: a343d257bab9fcd4b8d737f0f6f3b593, type: 3}
-  m_PrefabInstance: {fileID: 7970143244381280280}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 342fee68e89fdf74583f4666747bf546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1556901916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -962,6 +967,17 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!114 &2130089816 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7970143245628198720, guid: a343d257bab9fcd4b8d737f0f6f3b593, type: 3}
+  m_PrefabInstance: {fileID: 7970143244381280280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0

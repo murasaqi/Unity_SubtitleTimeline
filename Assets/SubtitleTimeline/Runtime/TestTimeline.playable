@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8104001154854825524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338c79d5f37147941a5e482b7714fc15, type: 3}
+  m_Name: SubtitleTimelineClip
+  m_EditorClassIdentifier: 
+  template:
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0.8}
 --- !u!114 &-7727626823449267129
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15,6 +30,21 @@ MonoBehaviour:
   template:
     textColor: {r: 1, g: 1, b: 1, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 0.8}
+--- !u!114 &-4438988975174626425
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338c79d5f37147941a5e482b7714fc15, type: 3}
+  m_Name: SubtitleTimelineClip
+  m_EditorClassIdentifier: 
+  template:
+    textColor: {r: 0, g: 0, b: 0, a: 0}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &-3209680608548466594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +83,29 @@ MonoBehaviour:
   template:
     textColor: {r: 1, g: 0.8748697, b: 0, a: 1}
     backgroundColor: {r: 0.4689295, g: 0, b: 0.6320754, a: 0.6313726}
+--- !u!114 &-1697449266710162644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a16748d9461eae46a725db9776d5390, type: 3}
+  m_Name: Markers
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!114 &-513258341193973207
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,7 +337,7 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 2.1333333333333346
     m_ClipIn: 0
-    m_Asset: {fileID: 3342209441159741744}
+    m_Asset: {fileID: -8104001154854825524}
     m_Duration: 2.1333333333333346
     m_TimeScale: 1
     m_ParentTrack: {fileID: -513258341193973207}
@@ -349,9 +402,16 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: "\u5B57\u5E55\u3092\u3064\u3051\u3089\u308C\u308B\u3088"
+    m_DisplayName: "\u5B57\u5E55\u3092\u8FFD\u52A0\u3067\u304D\u308B\u3088"
   m_Markers:
     m_Objects: []
+  backgroundImageReference:
+    exposedName: ea45878d9ebfbf84fb8514643784631e
+    defaultValue: {fileID: 0}
+  textMeshProUGUIReference:
+    exposedName: 0ca589ea5ad9e0043a24635cc661f030
+    defaultValue: {fileID: 0}
+  maxLineWidth: 1800
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +433,21 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: -3209680608548466594}
+--- !u!114 &2737551588832172183
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338c79d5f37147941a5e482b7714fc15, type: 3}
+  m_Name: SubtitleTimelineClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  template:
+    textColor: {r: 0, g: 0, b: 0, a: 0}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &3342209441159741744
 MonoBehaviour:
   m_ObjectHideFlags: 1
